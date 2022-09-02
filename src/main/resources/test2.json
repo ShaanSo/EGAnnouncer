@@ -1,0 +1,1226 @@
+{
+  "data": {
+    "Catalog": {
+      "searchStore": {
+        "elements": [
+          {
+            "title": "Killing Floor 2",
+            "id": "85f5ff10c31c4cd99978f4d57d3ec97a",
+            "namespace": "affc33b82405457595a032f00284abd2",
+            "description": "In KILLING FLOOR 2, players descend into continental Europe after it has been overrun by horrific, murderous clones called Zeds that were created by rogue elements of the Horzine Corporation. 6-player Co-Op & 12-player VS Zed-slaughtering mayhem.",
+            "effectiveDate": "2020-07-09T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/offer/affc33b82405457595a032f00284abd2/3f92fc65-f337-49e9-b5f8-8225ab5dc38f_1200x1600-cc435d1b298b51615ca8dc916d391b68"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/offer/affc33b82405457595a032f00284abd2/3f92fc65-f337-49e9-b5f8-8225ab5dc38f_1200x1600-cc435d1b298b51615ca8dc916d391b68"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/affc33b82405457595a032f00284abd2/7b71ad1e-a830-4834-ab00-5693f803656b_2560x1440-4995a845423263335d529fcae667e979"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/affc33b82405457595a032f00284abd2/3f92fc65-f337-49e9-b5f8-8225ab5dc38f_1200x1600-cc435d1b298b51615ca8dc916d391b68"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/affc33b82405457595a032f00284abd2/7b71ad1e-a830-4834-ab00-5693f803656b_2560x1440-4995a845423263335d529fcae667e979"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/offer/affc33b82405457595a032f00284abd2/3f92fc65-f337-49e9-b5f8-8225ab5dc38f_1200x1600-cc435d1b298b51615ca8dc916d391b68"
+              }
+            ],
+            "seller": {
+              "id": "o-2baznhy8tfh7fmyb55ul656v7ggt7r",
+              "name": "Tripwire Interactive"
+            },
+            "productSlug": "killing-floor-2",
+            "urlSlug": "killing-floor",
+            "url": null,
+            "items": [
+              {
+                "id": "9b211a4c84354cdc8a6c1095f85a6cc6",
+                "namespace": "affc33b82405457595a032f00284abd2"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.blacklist",
+                "value": "[]"
+              },
+              {
+                "key": "publisherName",
+                "value": "Tripwire Interactive"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "killing-floor-2"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "games/edition"
+              },
+              {
+                "path": "games/edition/base"
+              },
+              {
+                "path": "applications"
+              }
+            ],
+            "tags": [
+              {
+                "id": "1216"
+              },
+              {
+                "id": "1218"
+              },
+              {
+                "id": "21122"
+              },
+              {
+                "id": "16011"
+              },
+              {
+                "id": "9547"
+              },
+              {
+                "id": "1294"
+              },
+              {
+                "id": "15375"
+              },
+              {
+                "id": "21138"
+              },
+              {
+                "id": "16979"
+              },
+              {
+                "id": "21139"
+              },
+              {
+                "id": "17493"
+              },
+              {
+                "id": "21141"
+              },
+              {
+                "id": "18777"
+              },
+              {
+                "id": "21148"
+              },
+              {
+                "id": "21149"
+              },
+              {
+                "id": "14944"
+              },
+              {
+                "id": "1185"
+              },
+              {
+                "id": "1188"
+              },
+              {
+                "id": "19242"
+              },
+              {
+                "id": "1264"
+              },
+              {
+                "id": "1203"
+              },
+              {
+                "id": "21109"
+              },
+              {
+                "id": "1080"
+              },
+              {
+                "id": "1210"
+              },
+              {
+                "id": "21119"
+              }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "killing-floor-2",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 2999,
+                "originalPrice": 2999,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "$29.99",
+                  "discountPrice": "$29.99",
+                  "intermediatePrice": "$29.99"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": []
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [],
+              "upcomingPromotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-07-07T15:00:00.000Z",
+                      "endDate": "2022-07-14T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "title": "Geneforge 1 - Mutagen",
+            "id": "d8970826d8bb4d599a74ad990eb8ae01",
+            "namespace": "308652d49c89470fbf45fe8696b9c1c1",
+            "description": "Unique, open-ended fantasy RPG in an alien land. Use battle or cunning to change the world, served by your army of custom-made mutant monsters. Tons of skills, treasures, factions, treasures, and creations. Unmatched freedom and replayability in an epic story.",
+            "effectiveDate": "2021-02-24T14:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/308652d49c89470fbf45fe8696b9c1c1/offer/egs-geneforge1mutagen-spiderwebsoftware-s1-2560x1440-c8cf464f2b2a-2560x1440-8427125eb377278c6aed260c7900f2b6.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/308652d49c89470fbf45fe8696b9c1c1/offer/egs-geneforge1mutagen-spiderwebsoftware-s2-1200x1600-047ee886480c-1200x1600-668dc5abed1824b419b20b21c362904e.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/308652d49c89470fbf45fe8696b9c1c1/offer/egs-geneforge1mutagen-spiderwebsoftware-s2-1200x1600-047ee886480c-1200x1600-668dc5abed1824b419b20b21c362904e.jpg"
+              },
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/308652d49c89470fbf45fe8696b9c1c1/offer/egs-geneforge1mutagen-spiderwebsoftware-s2-1200x1600-047ee886480c-1200x1600-668dc5abed1824b419b20b21c362904e.jpg"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/308652d49c89470fbf45fe8696b9c1c1/offer/egs-geneforge1mutagen-spiderwebsoftware-s1-2560x1440-c8cf464f2b2a-2560x1440-8427125eb377278c6aed260c7900f2b6.jpg"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/308652d49c89470fbf45fe8696b9c1c1/offer/egs-geneforge1mutagen-spiderwebsoftware-s2-1200x1600-047ee886480c-1200x1600-668dc5abed1824b419b20b21c362904e.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-bu7q3xmhe9gddmtm7z8ubuc9fnes7n",
+              "name": "Spiderweb Software, Inc."
+            },
+            "productSlug": "geneforge-1-mutagen",
+            "urlSlug": "seaborgiumgeneralaudience",
+            "url": null,
+            "items": [
+              {
+                "id": "ff8740e4dfca4406b6c6c16e15bfc1a4",
+                "namespace": "308652d49c89470fbf45fe8696b9c1c1"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.blacklist",
+                "value": "[]"
+              },
+              {
+                "key": "publisherName",
+                "value": "Spiderweb Software"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "geneforge-1-mutagen"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "games/edition/base"
+              },
+              {
+                "path": "games/edition"
+              },
+              {
+                "path": "applications"
+              }
+            ],
+            "tags": [
+              {
+                "id": "1367"
+              },
+              {
+                "id": "1370"
+              },
+              {
+                "id": "9547"
+              },
+              {
+                "id": "1263"
+              },
+              {
+                "id": "10719"
+              },
+              {
+                "id": "15375"
+              }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "geneforge-1-mutagen",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 1995,
+                "voucherDiscount": 0,
+                "discount": 1995,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "$19.95",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": [
+                    {
+                      "id": "a981ad1318f9459eb1f7714c3eaf693e",
+                      "endDate": "2022-07-07T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-06-30T15:00:00.000Z",
+                      "endDate": "2022-07-07T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "upcomingPromotionalOffers": []
+            }
+          },
+          {
+            "title": "Ancient Enemy",
+            "id": "07c6a2e544274070b9e9ee78316c5774",
+            "namespace": "138c9362d8ff4c239076bc556e18cdac",
+            "description": "Ancient Enemy is an RPG card battler set in a crumbling world where the forces of evil have already won. Blast distorted enemies with a satisfying range of spells and abilities. Journey into a scarred wilderness and defeat the deadliest foe of all!",
+            "effectiveDate": "2021-03-18T16:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/138c9362d8ff4c239076bc556e18cdac/offer/EGS_AncientEnemy_GreyAlienGames_S1-2560x1440-5611384ea3fab5cf1deb1ca1003578e6.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/138c9362d8ff4c239076bc556e18cdac/offer/EGS_AncientEnemy_GreyAlienGames_S2-1200x1600-9921cef6b2c9a854cd8c31165e2dbe8a.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/138c9362d8ff4c239076bc556e18cdac/offer/EGS_AncientEnemy_GreyAlienGames_S2-1200x1600-9921cef6b2c9a854cd8c31165e2dbe8a.jpg"
+              },
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/138c9362d8ff4c239076bc556e18cdac/offer/EGS_AncientEnemy_GreyAlienGames_S2-1200x1600-9921cef6b2c9a854cd8c31165e2dbe8a.jpg"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/138c9362d8ff4c239076bc556e18cdac/offer/EGS_AncientEnemy_GreyAlienGames_S1-2560x1440-5611384ea3fab5cf1deb1ca1003578e6.jpg"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/138c9362d8ff4c239076bc556e18cdac/offer/EGS_AncientEnemy_GreyAlienGames_S2-1200x1600-9921cef6b2c9a854cd8c31165e2dbe8a.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-6kqztcrvfs2kjbsfbs9hgmcgsu6brr",
+              "name": "Grey Alien Games"
+            },
+            "productSlug": "ancient-enemy",
+            "urlSlug": "ancientenemy-general-audience",
+            "url": null,
+            "items": [
+              {
+                "id": "d5d03adf16824ea880b4031257048f0c",
+                "namespace": "138c9362d8ff4c239076bc556e18cdac"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.blacklist",
+                "value": "[]"
+              },
+              {
+                "key": "publisherName",
+                "value": "Grey Alien Games"
+              },
+              {
+                "key": "developerName",
+                "value": "Grey Alien Games"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "ancient-enemy"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "games/edition"
+              },
+              {
+                "path": "games/edition/base"
+              }
+            ],
+            "tags": [
+              {
+                "id": "16979"
+              },
+              {
+                "id": "17493"
+              },
+              {
+                "id": "18777"
+              },
+              {
+                "id": "18778"
+              },
+              {
+                "id": "19242"
+              },
+              {
+                "id": "9547"
+              },
+              {
+                "id": "16011"
+              },
+              {
+                "id": "1181"
+              },
+              {
+                "id": "1263"
+              },
+              {
+                "id": "15375"
+              },
+              {
+                "id": "18607"
+              }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "ancient-enemy",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 1499,
+                "originalPrice": 1499,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "$14.99",
+                  "discountPrice": "$14.99",
+                  "intermediatePrice": "$14.99"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": []
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [],
+              "upcomingPromotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-07-07T15:00:00.000Z",
+                      "endDate": "2022-07-14T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "title": "Hood: Outlaws & Legends",
+            "id": "b87d353b891e4541930799683678fa22",
+            "namespace": "5a2108f4db804040aaf44d139bd21bd1",
+            "description": "In a violent, medieval world, outplay rival gangs in intense PvPvE multiplayer heists. Moving in stealth to steal treasures unseen or dominating through loud and brutal combat, only the best will escape with hard-earned riches.",
+            "effectiveDate": "2021-05-10T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HoodOutlawsLegends_SumoDigital_S1_2560x1440-8ba1f9be04e3d0c07f9890a0bb8860c7"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HoodOutlawsLegends_SumoDigital_S2_1200x1600-64596c1b059d13feb5630b7c796042c1"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HoodOutlawsLegends_SumoDigital_S2_1200x1600-64596c1b059d13feb5630b7c796042c1"
+              },
+              {
+                "type": "CodeRedemption_340x440",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HoodOutlawsLegends_SumoDigital_S2_1200x1600-64596c1b059d13feb5630b7c796042c1"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HoodOutlawsLegends_SumoDigital_S3_2560x1440-1887b9cb69ecb2060a3be9c30b3d1c57"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_HoodOutlawsLegends_SumoDigital_S2_1200x1600-64596c1b059d13feb5630b7c796042c1"
+              }
+            ],
+            "seller": {
+              "id": "o-wt4zxeetmq6jem7qp4pkssr46aenj5",
+              "name": "Focus Home"
+            },
+            "productSlug": "hood-outlaws-and-legends",
+            "urlSlug": "nyxgeneralaudience",
+            "url": null,
+            "items": [
+              {
+                "id": "96f30922e8a7430fb58a2a1e945a5da4",
+                "namespace": "5a2108f4db804040aaf44d139bd21bd1"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.blacklist",
+                "value": "KR"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "hood-outlaws-and-legends"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "games/edition/base"
+              },
+              {
+                "path": "games/edition"
+              },
+              {
+                "path": "applications"
+              }
+            ],
+            "tags": [
+              {
+                "id": "1216"
+              },
+              {
+                "id": "19242"
+              },
+              {
+                "id": "9547"
+              },
+              {
+                "id": "16011"
+              },
+              {
+                "id": "9549"
+              },
+              {
+                "id": "15375"
+              },
+              {
+                "id": "1264"
+              },
+              {
+                "id": "1203"
+              },
+              {
+                "id": "16979"
+              },
+              {
+                "id": "18778"
+              },
+              {
+                "id": "1084"
+              },
+              {
+                "id": "1117"
+              },
+              {
+                "id": "18046"
+              }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "hood-outlaws-and-legends",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 1999,
+                "voucherDiscount": 0,
+                "discount": 1999,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "$19.99",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": [
+                    {
+                      "id": "51d4a0383b284708be9ffa36bfecc8e0",
+                      "endDate": "2022-07-07T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-06-30T15:00:00.000Z",
+                      "endDate": "2022-07-07T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "upcomingPromotionalOffers": []
+            }
+          },
+          {
+            "title": "Iratus: Lord of the Dead",
+            "id": "101ca62ae8064e4799bd84cd549479fa",
+            "namespace": "d250bdf072934b70ab080c6fcee77734",
+            "description": "Iratus: Lord of the Dead is a turn-based tactical roguelike RPG set in a dark fantasy universe. Lead an army of undead to help an angry necromancer in his quest to reach the surface world and bring death to the mortal realms!",
+            "effectiveDate": "2022-05-19T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/spt-assets/e7bee97d9a88475487a71b456a81110f/iratus--lord-of-the-dead-offer-i34hd.jpg"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/spt-assets/e7bee97d9a88475487a71b456a81110f/download-iratus--lord-of-the-dead-offer-1ucid.jpg"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/spt-assets/e7bee97d9a88475487a71b456a81110f/download-iratus--lord-of-the-dead-offer-1ucid.jpg"
+              }
+            ],
+            "seller": {
+              "id": "o-d2ygr9bjcjfebgt8842wvvbmswympz",
+              "name": "Daedalic Entertainment"
+            },
+            "productSlug": null,
+            "urlSlug": "2eb857a94203486db2119cd4ccf5b488",
+            "url": null,
+            "items": [
+              {
+                "id": "f96073dae3a04cb686b3cf6b9c25265c",
+                "namespace": "d250bdf072934b70ab080c6fcee77734"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "autoGeneratedPrice",
+                "value": "false"
+              },
+              {
+                "key": "isManuallySetPCReleaseDate",
+                "value": "true"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games/edition/base"
+              },
+              {
+                "path": "games/edition"
+              },
+              {
+                "path": "games"
+              }
+            ],
+            "tags": [
+              {
+                "id": "1367"
+              },
+              {
+                "id": "1370"
+              },
+              {
+                "id": "1386"
+              },
+              {
+                "id": "1115"
+              },
+              {
+                "id": "16011"
+              },
+              {
+                "id": "21147"
+              },
+              {
+                "id": "9547"
+              },
+              {
+                "id": "10719"
+              }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "iratus-d0e5ba",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [
+              {
+                "pageSlug": "iratus-d0e5ba",
+                "pageType": "productHome"
+              }
+            ],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 2999,
+                "voucherDiscount": 0,
+                "discount": 2999,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "$29.99",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": [
+                    {
+                      "id": "53db4abe12a2435e8b822219b4a08f47",
+                      "endDate": "2022-07-07T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            "promotions": {
+              "promotionalOffers": [
+                {
+                  "promotionalOffers": [
+                    {
+                      "startDate": "2022-06-30T15:00:00.000Z",
+                      "endDate": "2022-07-07T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "upcomingPromotionalOffers": []
+            }
+          },
+          {
+            "title": "Car Mechanic Simulator 2018",
+            "id": "5eb27cf1747c40b5a0d4f5492774678d",
+            "namespace": "226306adde104c9092247dcd4bfa1499",
+            "description": "Build and expand your repair service empire in this incredibly detailed and highly realistic simulation game, where attention to car detail is astonishing. Find classic, unique cars in the new Barn Find module and Junkyard module.",
+            "effectiveDate": "2022-06-23T15:00:00.000Z",
+            "offerType": "BASE_GAME",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": false,
+            "keyImages": [
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S2_1200x1600-f285924f9144353f57ac4631f0c689e6"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S1_2560x1440-3489ef1499e64c168fdf4b14926d2c23"
+              },
+              {
+                "type": "Thumbnail",
+                "url": "https://cdn1.epicgames.com/offer/226306adde104c9092247dcd4bfa1499/EGS_CarMechanicSimulator2018_RedDotGames_S2_1200x1600-f285924f9144353f57ac4631f0c689e6"
+              }
+            ],
+            "seller": {
+              "id": "o-5n5cbrasl5yzexjc529rypg8eh8lfb",
+              "name": "PlayWay"
+            },
+            "productSlug": "car-mechanic-simulator-2018",
+            "urlSlug": "car-mechanic-simulator-2018",
+            "url": null,
+            "items": [
+              {
+                "id": "49a3a8597c4240ecaf1f9068106c9869",
+                "namespace": "226306adde104c9092247dcd4bfa1499"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.blacklist",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "car-mechanic-simulator-2018"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "games/edition"
+              },
+              {
+                "path": "games/edition/base"
+              },
+              {
+                "path": "applications"
+              }
+            ],
+            "tags": [
+              {
+                "id": "21120"
+              },
+              {
+                "id": "1188"
+              },
+              {
+                "id": "21127"
+              },
+              {
+                "id": "9547"
+              },
+              {
+                "id": "21135"
+              },
+              {
+                "id": "1393"
+              },
+              {
+                "id": "21138"
+              },
+              {
+                "id": "21139"
+              },
+              {
+                "id": "21140"
+              },
+              {
+                "id": "21141"
+              },
+              {
+                "id": "1370"
+              },
+              {
+                "id": "21146"
+              },
+              {
+                "id": "21148"
+              },
+              {
+                "id": "21149"
+              },
+              {
+                "id": "21119"
+              }
+            ],
+            "catalogNs": {
+              "mappings": [
+                {
+                  "pageSlug": "car-mechanic-simulator-2018",
+                  "pageType": "productHome"
+                }
+              ]
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 1999,
+                "originalPrice": 1999,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "$19.99",
+                  "discountPrice": "$19.99",
+                  "intermediatePrice": "$19.99"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": []
+                }
+              ]
+            },
+            "promotions": null
+          },
+          {
+            "title": "Maneater",
+            "id": "a22a7af179c54b86a93f3193ace8f7f4",
+            "namespace": "d5241c76f178492ea1540fce45616757",
+            "description": "Maneater",
+            "effectiveDate": "2099-01-01T00:00:00.000Z",
+            "offerType": "OTHERS",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": true,
+            "keyImages": [
+              {
+                "type": "VaultClosed",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-tease-generic-promo-1920x1080_1920x1080-f7742c265e217510835ed14e04c48b4b"
+              },
+              {
+                "type": "DieselStoreFrontTall",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-tease-generic-promo-1920x1080_1920x1080-f7742c265e217510835ed14e04c48b4b"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-carousel-mobile-thumbnail-1200x1600_1200x1600-1f45bf1ceb21c1ca2947f6df5ece5346"
+              },
+              {
+                "type": "VaultOpened",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w4-1920x1080_1920x1080-2df36fe63c18ff6fcb5febf3dd7ed06e"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w4-1920x1080_1920x1080-2df36fe63c18ff6fcb5febf3dd7ed06e"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w4-1920x1080_1920x1080-2df36fe63c18ff6fcb5febf3dd7ed06e"
+              }
+            ],
+            "seller": {
+              "id": "o-ufmrk5furrrxgsp5tdngefzt5rxdcn",
+              "name": "Epic Dev Test Account"
+            },
+            "productSlug": "maneater",
+            "urlSlug": "game-4",
+            "url": null,
+            "items": [
+              {
+                "id": "8341d7c7e4534db7848cc428aa4cbe5a",
+                "namespace": "d5241c76f178492ea1540fce45616757"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.freegames.vault.close",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.slug",
+                "value": "free-games"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.open",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "maneater"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames/vaulted"
+              },
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "applications"
+              }
+            ],
+            "tags": [],
+            "catalogNs": {
+              "mappings": []
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 0,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "0",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": []
+                }
+              ]
+            },
+            "promotions": null
+          },
+          {
+            "title": "Wolfenstein: The New Order",
+            "id": "1d41b93230e54bdd80c559d72adb7f4f",
+            "namespace": "d5241c76f178492ea1540fce45616757",
+            "description": "Wolfenstein: The New Order",
+            "effectiveDate": "2099-01-01T00:00:00.000Z",
+            "offerType": "OTHERS",
+            "expiryDate": null,
+            "status": "ACTIVE",
+            "isCodeRedemptionOnly": true,
+            "keyImages": [
+              {
+                "type": "VaultClosed",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-tease-generic-promo-1920x1080_1920x1080-f7742c265e217510835ed14e04c48b4b"
+              },
+              {
+                "type": "OfferImageTall",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-carousel-mobile-thumbnail-1200x1600_1200x1600-1f45bf1ceb21c1ca2947f6df5ece5346"
+              },
+              {
+                "type": "OfferImageWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w3-1920x1080_1920x1080-4a501d33fb4ac641e3e1e290dcc0e6c1"
+              },
+              {
+                "type": "DieselStoreFrontWide",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w3-1920x1080_1920x1080-4a501d33fb4ac641e3e1e290dcc0e6c1"
+              },
+              {
+                "type": "VaultOpened",
+                "url": "https://cdn1.epicgames.com/offer/d5241c76f178492ea1540fce45616757/egs-vault-w3-1920x1080_1920x1080-4a501d33fb4ac641e3e1e290dcc0e6c1"
+              }
+            ],
+            "seller": {
+              "id": "o-ufmrk5furrrxgsp5tdngefzt5rxdcn",
+              "name": "Epic Dev Test Account"
+            },
+            "productSlug": "wolfenstein-the-new-order",
+            "urlSlug": "game-3",
+            "url": null,
+            "items": [
+              {
+                "id": "8341d7c7e4534db7848cc428aa4cbe5a",
+                "namespace": "d5241c76f178492ea1540fce45616757"
+              }
+            ],
+            "customAttributes": [
+              {
+                "key": "com.epicgames.app.freegames.vault.close",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.slug",
+                "value": "free-games"
+              },
+              {
+                "key": "com.epicgames.app.freegames.vault.open",
+                "value": "[]"
+              },
+              {
+                "key": "com.epicgames.app.productSlug",
+                "value": "wolfenstein-the-new-order"
+              }
+            ],
+            "categories": [
+              {
+                "path": "freegames/vaulted"
+              },
+              {
+                "path": "freegames"
+              },
+              {
+                "path": "games"
+              },
+              {
+                "path": "applications"
+              }
+            ],
+            "tags": [],
+            "catalogNs": {
+              "mappings": []
+            },
+            "offerMappings": [],
+            "price": {
+              "totalPrice": {
+                "discountPrice": 0,
+                "originalPrice": 0,
+                "voucherDiscount": 0,
+                "discount": 0,
+                "currencyCode": "USD",
+                "currencyInfo": {
+                  "decimals": 2
+                },
+                "fmtPrice": {
+                  "originalPrice": "0",
+                  "discountPrice": "0",
+                  "intermediatePrice": "0"
+                }
+              },
+              "lineOffers": [
+                {
+                  "appliedRules": []
+                }
+              ]
+            },
+            "promotions": null
+          }
+        ],
+        "paging": {
+          "count": 1000,
+          "total": 8
+        }
+      }
+    }
+  },
+  "extensions": {}
+}
