@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class JsonData {
@@ -38,8 +39,8 @@ public class JsonData {
                 for (PromotionalOffers offer: el.getPromotions().getPromotionalOffers()) {
                     if (!offer.getPromotionalOffers().isEmpty()) {
                         for (PromotionalOffers innerOffers: offer.getPromotionalOffers()) {
-                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat();
-                            simpleDateFormat.applyPattern("yyyy-MM-dd'T'HH:mm:sss");
+                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
                             Date start = simpleDateFormat.parse(innerOffers.getStartDate());
                             Date end = simpleDateFormat.parse(innerOffers.getEndDate());
                             promotion.setStartDate(start);

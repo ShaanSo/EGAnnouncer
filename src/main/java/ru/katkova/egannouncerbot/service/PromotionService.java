@@ -28,7 +28,7 @@ public class PromotionService {
 
     @SneakyThrows
     public boolean isActualPromotion(Promotion promotion) {
-        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ");
+        SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
         df.setTimeZone(TimeZone.getTimeZone("UTC"));
         Date startDateFormatted = df.parse(df.format(promotion.startDate));
         Date endDateFormatted = df.parse(df.format(promotion.endDate));

@@ -37,7 +37,6 @@ public class CheckForUpdatesJob {
 
     @Autowired
     PromotionService promotionService;
-
     @Autowired
     UserService userService;
     @Autowired
@@ -55,11 +54,11 @@ public class CheckForUpdatesJob {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonData jsonData;
         List<Promotion> promotionList = new ArrayList<>();
+//       для теста
         try {
             File file = new File("src/main/resources/test.json");
             jsonData = objectMapper.readValue(file, JsonData.class);
             promotionList = jsonData.getCurrentPromotionsList();
-//            jsonData.getElements().get(0);
         } catch (StreamReadException estr) {
             System.out.println("StreamReadException");
         } catch (IOException e) {
@@ -68,7 +67,7 @@ public class CheckForUpdatesJob {
         }
 
         //получаем пользователей из БД, которым нужно разослать уведомление
-            List<User> userList =  userService.restoreUsersFromDB();
+        List<User> userList =  userService.restoreUsersFromDB();
 
         //проходим по списку присланных предложений
         for (Promotion pr: promotionList) {
@@ -79,22 +78,19 @@ public class CheckForUpdatesJob {
                 promotionService.putIntoDB(pr);
                 //формируем текст сообщения
                 for (User user:userList) {
-                    String chatId = user.getChatId();
                     InputFile inputFile = new InputFile(pr.getImageUrl());
                     String preparedText = "*Название:* "+pr.title + "\n" + "*Описание:* "+ pr.description + "\n" + "*Начало раздачи:* " + pr.startDate + "\n" + "*Окончание раздачи:* " + pr.endDate;
                     SendPhoto message = new SendPhoto();
                     message.setPhoto(inputFile);
                     message.setParseMode("Markdown");
                     message.setCaption(preparedText);
-                    message.setChatId(878085664L);
-                    message.setChatId(chatId);
+                    message.setChatId(user.getChatId());
                     try {
                         bot.execute(message);
                     }  catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
                 }
-
             }
         }
     }
