@@ -1,29 +1,33 @@
 package ru.katkova.egannouncerbot.bot;
 
-import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.katkova.egannouncerbot.ApplicationProperties;
 import ru.katkova.egannouncerbot.data.User;
-import ru.katkova.egannouncerbot.repository.UserRepository;
+import ru.katkova.egannouncerbot.service.UserService;
 
 @Component
-@RequiredArgsConstructor
+@EnableConfigurationProperties(ApplicationProperties.class)
 public class Bot extends TelegramLongPollingBot {
 
     private final ApplicationProperties properties;
 
-//    public static final String BOT_USER_NAME = "GameAnnouncerBot";
-//    public static final String BOT_TOKEN = "5486943382:AAF1pb6Cs4pmQqIpQtFlVrP9y70jeXmU8OU";
+    @Autowired
+    private UserService userService;
 
-    UserRepository connectionU = new UserRepository();
+    @Autowired
+    public Bot(ApplicationProperties properties) {
+        this.properties = properties;
+    }
 
     public void onUpdateReceived(Update update) {
         User user = new User();
         update.getMessage().getChatId();
         Long chatId = update.getMessage().getChatId();
-        connectionU.createNewUser(chatId);
+        userService.createNewUser(user);
 
 //        if (!update.getMessage().getNewChatMembers().isEmpty()) {
 //            SendMessage message = new SendMessage().setChatId(chatId).setText("rounded_text");
@@ -53,14 +57,4 @@ public class Bot extends TelegramLongPollingBot {
     public String getBotToken() {
         return properties.getToken();
     }
-
-//    @Override
-//    public String getBotUsername() {
-//        return BOT_USER_NAME;
-//    }
-//
-//    @Override
-//    public String getBotToken() {
-//        return BOT_TOKEN;
-//    }
 }

@@ -17,7 +17,7 @@ public class EpicGamesService {
 
     @Autowired
     RestTemplate restTemplate;
-
+    @Autowired
     private final ApplicationProperties properties;
 
     public String handleRequest()

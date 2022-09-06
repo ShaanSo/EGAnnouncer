@@ -13,13 +13,13 @@ import org.springframework.web.client.RestClientException;
 import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.katkova.egannouncerbot.ApplicationProperties;
 import ru.katkova.egannouncerbot.bot.Bot;
 import ru.katkova.egannouncerbot.data.JsonData;
 import ru.katkova.egannouncerbot.data.Promotion;
 import ru.katkova.egannouncerbot.service.EpicGamesService;
 import ru.katkova.egannouncerbot.data.User;
-import ru.katkova.egannouncerbot.repository.UserRepository;
+import ru.katkova.egannouncerbot.service.PromotionService;
+import ru.katkova.egannouncerbot.service.UserService;
 
 import java.io.File;
 import java.io.IOException;
@@ -30,14 +30,21 @@ import java.util.UUID;
 @Component
 @EnableScheduling
 @Slf4j
-public class CheckForUpdatesJob extends Bot {
+public class CheckForUpdatesJob {
 
     @Autowired
     EpicGamesService epicGamesService;
 
-    public CheckForUpdatesJob(ApplicationProperties properties) {
-        super(properties);
-    }
+    @Autowired
+    PromotionService promotionService;
+
+    @Autowired
+    UserService userService;
+    @Autowired
+    Bot bot;
+
+//    public CheckForUpdatesJob(ApplicationProperties properties) {super(properties);
+//    }
 
     //    @Scheduled(cron = "${bot.scheduleCron}", zone = "${bot.timeZone}")
     @Scheduled(fixedRate = 10000L)
@@ -61,16 +68,15 @@ public class CheckForUpdatesJob extends Bot {
         }
 
         //получаем пользователей из БД, которым нужно разослать уведомление
-            UserRepository connectionU = new UserRepository();
-            List<User> userList = connectionU.restoreUsersFromDB();
+            List<User> userList =  userService.restoreUsersFromDB();
 
         //проходим по списку присланных предложений
         for (Promotion pr: promotionList) {
             //проверяем, подходит ли предложение и не публиковали ли его уже
-            if (pr.isActualPromotion() && (true || !pr.existsInDB())) {
+            if (promotionService.isActualPromotion(pr) && (true || ! promotionService.existsInDB(pr))) {
                 //складываем в БД
                 pr.setId(UUID.randomUUID().toString());
-                pr.putIntoDB();
+                promotionService.putIntoDB(pr);
                 //формируем текст сообщения
                 for (User user:userList) {
                     String chatId = user.getChatId();
@@ -83,7 +89,7 @@ public class CheckForUpdatesJob extends Bot {
                     message.setChatId(878085664L);
                     message.setChatId(chatId);
                     try {
-                        execute(message);
+                        bot.execute(message);
                     }  catch (TelegramApiException e) {
                         e.printStackTrace();
                     }
