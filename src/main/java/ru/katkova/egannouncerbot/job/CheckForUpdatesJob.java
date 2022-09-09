@@ -1,7 +1,6 @@
 package ru.katkova.egannouncerbot.job;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -20,9 +19,6 @@ import ru.katkova.egannouncerbot.service.EpicGamesService;
 import ru.katkova.egannouncerbot.data.User;
 import ru.katkova.egannouncerbot.service.PromotionService;
 import ru.katkova.egannouncerbot.service.UserService;
-
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
@@ -42,11 +38,9 @@ public class CheckForUpdatesJob {
     @Autowired
     Bot bot;
 
-//    public CheckForUpdatesJob(ApplicationProperties properties) {super(properties);
-//    }
-
-    //    @Scheduled(cron = "${bot.scheduleCron}", zone = "${bot.timeZone}")
-    @Scheduled(fixedRate = 10000L)
+    @Scheduled(cron = "${bot.scheduleCron}", zone = "${bot.timeZone}")
+    @SneakyThrows
+//    @Scheduled(fixedRate = 10000L)
     public void check() throws JsonProcessingException {
 
         //делаем запрос в API и разбираем ответ
@@ -54,17 +48,19 @@ public class CheckForUpdatesJob {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonData jsonData;
         List<Promotion> promotionList = new ArrayList<>();
+        jsonData = objectMapper.readValue(response, JsonData.class);
+        promotionList = jsonData.getCurrentPromotionsList();
 //       для теста
-        try {
-            File file = new File("src/main/resources/test.json");
-            jsonData = objectMapper.readValue(file, JsonData.class);
-            promotionList = jsonData.getCurrentPromotionsList();
-        } catch (StreamReadException estr) {
-            System.out.println("StreamReadException");
-        } catch (IOException e) {
-            System.out.println("IOEXCEPTION");
-            e.printStackTrace();
-        }
+//        try {
+//            File file = new File("src/main/resources/test2.json");
+//            jsonData = objectMapper.readValue(file, JsonData.class);
+//            promotionList = jsonData.getCurrentPromotionsList();
+//        } catch (StreamReadException estr) {
+//            System.out.println("StreamReadException");
+//        } catch (IOException e) {
+//            System.out.println("IOEXCEPTION");
+//            e.printStackTrace();
+//        }
 
         //получаем пользователей из БД, которым нужно разослать уведомление
         List<User> userList =  userService.restoreUsersFromDB();
@@ -72,7 +68,7 @@ public class CheckForUpdatesJob {
         //проходим по списку присланных предложений
         for (Promotion pr: promotionList) {
             //проверяем, подходит ли предложение и не публиковали ли его уже
-            if (promotionService.isActualPromotion(pr) && (true || ! promotionService.existsInDB(pr))) {
+            if (promotionService.isActualPromotion(pr) && (!promotionService.existsInDB(pr))) {
                 //складываем в БД
                 pr.setId(UUID.randomUUID().toString());
                 promotionService.putIntoDB(pr);

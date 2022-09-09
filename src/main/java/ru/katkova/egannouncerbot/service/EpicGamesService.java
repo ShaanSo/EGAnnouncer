@@ -23,18 +23,15 @@ public class EpicGamesService {
     public String handleRequest()
             throws JsonProcessingException, RestClientException {
 
-
         log.info("[EGService] Request received. Headers: ");
         HttpEntity<String> entityRq = new HttpEntity<>("", new org.springframework.http.HttpHeaders());
 
-//        var entityRs = restTemplate.getForEntity(properties.getUrl(), String.class);
-//
-//        var headersRs = entityRs.getHeaders();
-//        var bodyRs = entityRs.getBody();
+        var entityRs = restTemplate.getForEntity(properties.getUrl(), String.class);
+        var headersRs = entityRs.getHeaders();
+        var bodyRs = entityRs.getBody();
 
-//        log.info("[ExecuteRiskService] Response received. Headers: " + headersRs.toString() + "\nBody: " + bodyRs);
+        log.info("[ExecuteRiskService] Response received. Headers: " + headersRs.toString() + "\nBody: " + bodyRs);
 
-        return "";
-//        return bodyRs;
+        return bodyRs;
     }
 }

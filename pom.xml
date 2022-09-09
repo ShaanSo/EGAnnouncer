@@ -65,20 +65,33 @@
             <artifactId>flyway-core</artifactId>
             <version>5.2.4</version>
         </dependency>
-        <dependency>
-        <groupId>org.springframework.security</groupId>
-        <artifactId>spring-security-test</artifactId>
-        <scope>test</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--        <groupId>org.springframework.security</groupId>-->
+<!--        <artifactId>spring-security-test</artifactId>-->
+<!--        <scope>test</scope>-->
+<!--        </dependency>-->
     </dependencies>
     <build>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <profiles>
+                        <profile>dev</profile>
+                    </profiles>
+                    <fork>true</fork>
+                    <mainClass>ru.katkova.egannouncerbot.Application</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <version>2.7.3</version>
             </plugin>
-
             <plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
@@ -92,6 +105,31 @@
                     </schemas>
                 </configuration>
             </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-assembly-plugin</artifactId>-->
+<!--                <version>3.4.2</version>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <phase>package</phase>-->
+<!--                        <goals>-->
+<!--                            <goal>single</goal>-->
+<!--                        </goals>-->
+<!--                        <configuration>-->
+<!--                            <archive>-->
+<!--                                <manifest>-->
+<!--                                    <mainClass>-->
+<!--                                        ru.katkova.egannouncerbot.Application-->
+<!--                                    </mainClass>-->
+<!--                                </manifest>-->
+<!--                            </archive>-->
+<!--                            <descriptorRefs>-->
+<!--                                <descriptorRef>jar-with-dependencies</descriptorRef>-->
+<!--                            </descriptorRefs>-->
+<!--                        </configuration>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
         </plugins>
     </build>
 </project>
