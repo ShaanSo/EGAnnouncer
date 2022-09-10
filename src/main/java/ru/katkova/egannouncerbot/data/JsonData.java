@@ -4,8 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
-import ru.katkova.egannouncerbot.data.Promotion;
-
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
