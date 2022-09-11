@@ -1,6 +1,7 @@
 package ru.katkova.egannouncerbot.job;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -19,6 +20,8 @@ import ru.katkova.egannouncerbot.service.EpicGamesService;
 import ru.katkova.egannouncerbot.data.User;
 import ru.katkova.egannouncerbot.service.PromotionService;
 import ru.katkova.egannouncerbot.service.UserService;
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;

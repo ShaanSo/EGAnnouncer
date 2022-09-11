@@ -25,8 +25,10 @@ public class Bot extends TelegramLongPollingBot {
 
     public void onUpdateReceived(Update update) {
         User user = new User();
-        update.getMessage().getChatId();
-        userService.createNewUser(user);
+        Long chatId = update.getMessage().getChatId();
+        if (!userService.existsInDB(chatId)) {
+            userService.createNewUser(user);
+        }
 
 //        if (!update.getMessage().getNewChatMembers().isEmpty()) {
 //            SendMessage message = new SendMessage().setChatId(chatId).setText("rounded_text");

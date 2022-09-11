@@ -328,6 +328,14 @@
                         "discountType": "PERCENTAGE",
                         "discountPercentage": 0
                       }
+                    },
+                    {
+                      "startDate": "2022-09-08T15:00:00.000Z",
+                      "endDate": "2gdfgffd022-09999-16T15:00:00.000Z",
+                      "discountSetting": {
+                        "discountType": "PERCENTAGE",
+                        "discountPercentage": 0
+                      }
                     }
                   ]
                 }

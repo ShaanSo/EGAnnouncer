@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface PromotionRepository extends JpaRepository<Promotion, String> {
 
-    public List<Promotion> findByTitleAndStartDateAndEndDate(String title, Date startDate, Date endDate);
+    List<Promotion> findByTitleAndStartDateAndEndDate(String title, Date startDate, Date endDate);
 }
