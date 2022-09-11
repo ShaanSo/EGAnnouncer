@@ -4,6 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
+
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -21,34 +23,58 @@ public class JsonData {
     @SneakyThrows
     public List<Promotion> getCurrentPromotionsList() {
         List<Promotion> promotionsList = new ArrayList<>();
-        for (Elements el: getElements()
-             ) {
-            Promotion promotion = new Promotion();
-            if (!el.getTitle().isEmpty()) {
-                promotion.setTitle(el.getTitle());
-            } else continue;
-            if (!el.getDescription().isEmpty()) {
-                promotion.setDescription(el.getDescription());
-            }
-            if (!el.getKeyImages().isEmpty()) {
-                promotion.setImageUrl(el.getKeyImages().get(0).getUrl());
-            }
-            if (isNotNull(el.getPromotions()) && !el.getPromotions().getPromotionalOffers().isEmpty()) {
-                for (PromotionalOffers offer: el.getPromotions().getPromotionalOffers()) {
-                    if (!offer.getPromotionalOffers().isEmpty()) {
-                        for (PromotionalOffers innerOffers: offer.getPromotionalOffers()) {
-                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-                            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-                            Date start = simpleDateFormat.parse(innerOffers.getStartDate());
-                            Date end = simpleDateFormat.parse(innerOffers.getEndDate());
-                            promotion.setStartDate(start);
-                            promotion.setEndDate(end);
-                        }
-                    }
-                }
-            } else continue;
-            promotionsList.add(promotion);
-        }
+        getElements().stream().filter(element -> !element.getTitle().isEmpty())
+                .filter(element -> isNotNull(element.getPromotions()))
+                .filter(element -> !element.getPromotions().getPromotionalOffers().isEmpty())
+                .filter(element -> !element.getPromotions().getPromotionalOffers().get(0).getPromotionalOffers().isEmpty())
+                .forEach(element -> {
+                    element.getPromotions().getPromotionalOffers().stream()
+                            .forEach(promotionalOffer -> {promotionalOffer.getPromotionalOffers().stream()
+                                    .forEach(innerPromotionalOffer ->{
+                                        Promotion promotion = new Promotion();
+                                        promotion.setTitle(element.getTitle());
+                                        promotion.setDescription(element.getDescription());
+                                        promotion.setImageUrl(element.getKeyImages().get(0).getUrl());
+                                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                                        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+                                        try {
+                                            Date start = simpleDateFormat.parse(innerPromotionalOffer.getStartDate());
+                                            Date end = simpleDateFormat.parse(innerPromotionalOffer.getEndDate());
+                                            promotion.setStartDate(start);
+                                            promotion.setEndDate(end);
+                                            promotionsList.add(promotion);
+                                        } catch (ParseException e) {
+                                        }
+                                    });});
+                });
+
+//        for (Elements el: getElements()) {
+//            Promotion promotion = new Promotion();
+//            if (!el.getTitle().isEmpty()) {
+//                promotion.setTitle(el.getTitle());
+//            } else continue;
+//            if (!el.getDescription().isEmpty()) {
+//                promotion.setDescription(el.getDescription());
+//            }
+//            if (!el.getKeyImages().isEmpty()) {
+//                promotion.setImageUrl(el.getKeyImages().get(0).getUrl());
+//            }
+//            if (isNotNull(el.getPromotions()) && !el.getPromotions().getPromotionalOffers().isEmpty()) {
+//                for (PromotionalOffers offer: el.getPromotions().getPromotionalOffers()) {
+//                    if (!offer.getPromotionalOffers().isEmpty()) {
+//                        for (PromotionalOffers innerOffers: offer.getPromotionalOffers()) {
+//                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+//                            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+//                            Date start = simpleDateFormat.parse(innerOffers.getStartDate());
+//                            Date end = simpleDateFormat.parse(innerOffers.getEndDate());
+//                            promotion.setStartDate(start);
+//                            promotion.setEndDate(end);
+//                        }
+//                    }
+//                }
+//            } else continue;
+//            promotionsList.add(promotion);
+//        }
         return promotionsList;
     }
 

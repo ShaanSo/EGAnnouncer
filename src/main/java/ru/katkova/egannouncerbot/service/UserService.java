@@ -19,4 +19,7 @@ public class UserService {
         public List<User> restoreUsersFromDB() {
             return userRepository.findAll();
     }
+        public boolean existsInDB(Long chatId) {
+        return !(userRepository.findFirstByChatId(chatId) == null);
+        }
 }

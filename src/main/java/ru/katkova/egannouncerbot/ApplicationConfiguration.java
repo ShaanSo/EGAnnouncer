@@ -16,9 +16,7 @@ public class ApplicationConfiguration {
     public RestTemplate restTemplate(RestTemplateBuilder builder) {
         return builder.build();
     }
-
     private DataSource dataSource;
-
     @Autowired
     public void setDataSource(DataSource dataSource) {
         this.dataSource = dataSource;

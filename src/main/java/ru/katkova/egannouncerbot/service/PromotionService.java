@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.katkova.egannouncerbot.data.Promotion;
 import ru.katkova.egannouncerbot.repository.PromotionRepository;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
