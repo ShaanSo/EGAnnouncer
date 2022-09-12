@@ -32,9 +32,6 @@ public class PromotionService {
         Date startDateFormatted = df.parse(df.format(promotion.startDate));
         Date endDateFormatted = df.parse(df.format(promotion.endDate));
         Date GmtDate = df.parse(df.format(new Date()));
-        System.out.println(GmtDate);
-        System.out.println(startDateFormatted);
-        System.out.println(endDateFormatted);
         return GmtDate.after(startDateFormatted) && GmtDate.before(endDateFormatted);
     }
 }
