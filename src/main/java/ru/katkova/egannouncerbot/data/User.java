@@ -2,10 +2,8 @@ package ru.katkova.egannouncerbot.data;
 
 import lombok.Getter;
 import lombok.Setter;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -14,12 +12,12 @@ import javax.persistence.Table;
 public class User {
     @Id
     @Column(name = "chatid")
-    private String chatId;
+    private Long chatId;
 
     public User()
     { }
 
-    public User(String chatId) {
+    public User(Long chatId) {
         this.chatId = chatId;
     }
 }
