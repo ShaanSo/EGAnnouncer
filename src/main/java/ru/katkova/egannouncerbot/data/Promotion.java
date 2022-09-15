@@ -21,6 +21,6 @@ public class Promotion {
     public Date startDate;
     @Column(name = "enddate")
     public Date endDate;
-    @Transient
+    @Column(name = "imageurl")
     public String imageUrl;
 }
