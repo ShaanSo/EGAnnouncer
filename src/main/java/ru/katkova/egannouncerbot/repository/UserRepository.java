@@ -8,4 +8,7 @@ import ru.katkova.egannouncerbot.data.User;
 public interface UserRepository extends JpaRepository<User, Long> {
 
     User findFirstByChatId(Long chatId);
+
+    void deleteAllByChatId(Long chatId);
+
 }

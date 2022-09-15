@@ -10,9 +10,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestClientException;
-import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
-import org.telegram.telegrambots.meta.api.objects.InputFile;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.katkova.egannouncerbot.bot.Bot;
 import ru.katkova.egannouncerbot.data.JsonData;
 import ru.katkova.egannouncerbot.data.Promotion;
@@ -77,18 +74,7 @@ public class CheckForUpdatesJob {
                 promotionService.putIntoDB(pr);
                 //формируем текст сообщения
                 for (User user:userList) {
-                    InputFile inputFile = new InputFile(pr.getImageUrl());
-                    String preparedText = "*Название:* "+pr.title + "\n" + "*Описание:* "+ pr.description + "\n" + "*Начало раздачи:* " + pr.startDate + "\n" + "*Окончание раздачи:* " + pr.endDate;
-                    SendPhoto message = new SendPhoto();
-                    message.setPhoto(inputFile);
-                    message.setParseMode("Markdown");
-                    message.setCaption(preparedText);
-                    message.setChatId(user.getChatId());
-                    try {
-                        bot.execute(message);
-                    }  catch (TelegramApiException e) {
-                        e.printStackTrace();
-                    }
+                    bot.formAndSendPromotion(pr, user);
                 }
             }
         }

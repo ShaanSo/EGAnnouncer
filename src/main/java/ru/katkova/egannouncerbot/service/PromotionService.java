@@ -34,4 +34,8 @@ public class PromotionService {
         Date GmtDate = df.parse(df.format(new Date()));
         return GmtDate.after(startDateFormatted) && GmtDate.before(endDateFormatted);
     }
+
+    public List<Promotion> getActualPromotions() {
+        return promotionRepository.findByStartDateBeforeAndEndDateAfter(new Date(), new Date());
+    }
 }

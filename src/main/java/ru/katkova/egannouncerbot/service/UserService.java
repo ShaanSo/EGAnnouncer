@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import ru.katkova.egannouncerbot.data.User;
 import ru.katkova.egannouncerbot.repository.UserRepository;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -21,5 +22,9 @@ public class UserService {
     }
         public boolean existsInDB(Long chatId) {
         return !(userRepository.findFirstByChatId(chatId) == null);
+        }
+        @Transactional
+        public void deleteUser(Long chatId) {
+            userRepository.deleteAllByChatId(chatId);
         }
 }

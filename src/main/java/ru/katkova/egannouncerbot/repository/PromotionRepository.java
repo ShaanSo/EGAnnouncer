@@ -10,4 +10,7 @@ import java.util.List;
 public interface PromotionRepository extends JpaRepository<Promotion, String> {
 
     List<Promotion> findByTitleAndStartDateAndEndDate(String title, Date startDate, Date endDate);
+
+    List<Promotion> findByStartDateBeforeAndEndDateAfter(Date currentDateFrom, Date currentDateTo);
+
 }
