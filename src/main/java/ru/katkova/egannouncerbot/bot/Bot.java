@@ -13,7 +13,6 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import ru.katkova.egannouncerbot.ApplicationProperties;
 import ru.katkova.egannouncerbot.data.Promotion;
 import ru.katkova.egannouncerbot.data.User;
-import ru.katkova.egannouncerbot.service.EpicGamesService;
 import ru.katkova.egannouncerbot.service.PromotionService;
 import ru.katkova.egannouncerbot.service.UserService;
 import java.util.List;
@@ -26,8 +25,6 @@ public class Bot extends TelegramLongPollingBot {
     private UserService userService;
     @Autowired
     private PromotionService promotionService;
-    @Autowired
-    private EpicGamesService epicGamesService;
 
     @Autowired
     public Bot(ApplicationProperties properties) {
@@ -62,22 +59,22 @@ public class Bot extends TelegramLongPollingBot {
     public void formAndSendPromotion(Promotion pr, User user) {
         String preparedText = "*Название:* "+pr.title + "\n" + "*Описание:* "+ pr.description + "\n" + "*Начало раздачи:* " + pr.startDate + "\n" + "*Окончание раздачи:* " + pr.endDate;
         if (pr.getImageUrl() != null) {
-            SendPhoto message = new SendPhoto();
             InputFile inputFile = new InputFile(pr.getImageUrl());
-            message.setPhoto(inputFile);
-            message.setParseMode("Markdown");
-            message.setCaption(preparedText);
-            message.setChatId(user.getChatId());
+            SendPhoto message = SendPhoto.builder()
+                    .photo(inputFile)
+                    .chatId(user.getChatId())
+                    .parseMode("Markdown")
+                    .caption(preparedText).build();
             try {
                 execute(message);
             }  catch (TelegramApiException e) {
                 e.printStackTrace();
             }
         } else {
-            SendMessage message = new SendMessage();
-            message.setChatId(user.getChatId());
-            message.setParseMode("Markdown");
-            message.setText(preparedText);
+            SendMessage message = SendMessage.builder()
+                    .chatId(user.getChatId())
+                    .parseMode("Markdown")
+                    .text(preparedText).build();
             try {
                 execute(message);
             }  catch (TelegramApiException e) {

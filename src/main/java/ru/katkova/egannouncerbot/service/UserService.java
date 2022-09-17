@@ -1,5 +1,6 @@
 package ru.katkova.egannouncerbot.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ru.katkova.egannouncerbot.data.User;
@@ -9,12 +10,14 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
+@Slf4j
 public class UserService {
 
     @Autowired
     private UserRepository userRepository;
 
         public void createNewUser(User user) {
+            log.info("User with chat id " + user.getChatId() + " was created in DB");
             userRepository.save(user);
     }
         public List<User> restoreUsersFromDB() {
@@ -25,6 +28,7 @@ public class UserService {
         }
         @Transactional
         public void deleteUser(Long chatId) {
+            log.info("User with chat id " + chatId + " was deleted from DB");
             userRepository.deleteAllByChatId(chatId);
         }
 }
