@@ -19,7 +19,6 @@ public class Application {
 
         ConfigurableApplicationContext appContext = SpringApplication.run(Application.class, args);
 
-
         try {
             Bot bot = appContext.getBean(Bot.class);
             TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class);

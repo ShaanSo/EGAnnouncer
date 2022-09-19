@@ -1,5 +1,6 @@
 package ru.katkova.egannouncerbot.bot;
 
+import lombok.SneakyThrows;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,8 @@ import ru.katkova.egannouncerbot.data.Promotion;
 import ru.katkova.egannouncerbot.data.User;
 import ru.katkova.egannouncerbot.service.PromotionService;
 import ru.katkova.egannouncerbot.service.UserService;
+
+import java.text.SimpleDateFormat;
 import java.util.List;
 
 @Component
@@ -57,14 +60,18 @@ public class Bot extends TelegramLongPollingBot {
     }
 
     public void formAndSendPromotion(Promotion pr, User user) {
-        String preparedText = "*Название:* "+pr.title + "\n" + "*Описание:* "+ pr.description + "\n" + "*Начало раздачи:* " + pr.startDate + "\n" + "*Окончание раздачи:* " + pr.endDate;
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        String start = simpleDateFormat.format(pr.startDate);
+        String end = simpleDateFormat.format(pr.endDate);
+        String preparedText = "*Название:* "+pr.title + "\n" + "*Описание:* "+ pr.description + "\n" + "*Начало раздачи:* " + start + "\n" + "*Окончание раздачи:* " + end;
         if (pr.getImageUrl() != null) {
             InputFile inputFile = new InputFile(pr.getImageUrl());
             SendPhoto message = SendPhoto.builder()
                     .photo(inputFile)
                     .chatId(user.getChatId())
                     .parseMode("Markdown")
-                    .caption(preparedText).build();
+                    .caption(preparedText)
+                    .build();
             try {
                 execute(message);
             }  catch (TelegramApiException e) {
