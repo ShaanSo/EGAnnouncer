@@ -1,7 +1,6 @@
 package ru.katkova.egannouncerbot.job;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -44,6 +43,7 @@ public class CheckForUpdatesJob {
     public void check() throws JsonProcessingException {
 
         //делаем запрос в API и разбираем ответ
+        log.debug("[CheckForUpdatesJob] Check for updates started");
         String response = executeService(epicGamesService);
         ObjectMapper objectMapper = new ObjectMapper();
         JsonData jsonData;
@@ -83,9 +83,7 @@ public class CheckForUpdatesJob {
     @SneakyThrows
     public String executeService(EpicGamesService epicGamesService)
             throws JsonProcessingException, RestClientException {
-        log.debug("Received [request '{}]' for ExecuteRiskService");
         var response = epicGamesService.handleRequest();
-        log.debug("Send [response '{}]' for ExecuteRiskService");
         return response;
     }
 }
