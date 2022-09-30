@@ -29,11 +29,17 @@ public class Bot extends TelegramLongPollingBot {
     @Autowired
     private PromotionService promotionService;
 
+    private static final String GREETINGS_TEXT = "Привет! Я Epic Games Announcer Bot. \n"+
+            "Я буду присылать тебе анонсы бесплатных игр, которые появляются в Epic Games Store каждую неделю. \n" +
+            "Обычно новые бесплатные раздачи появляются в EGS по четвергам в 18-00, но на всякий случай я проверяю обновления каждый день. \n" +
+            "Приятного пользования!";
+
     @Autowired
     public Bot(ApplicationProperties properties) {
         this.properties = properties;
     }
 
+    @SneakyThrows
     public void onUpdateReceived(Update update) {
         User user = new User();
         Long chatId = update.getMessage().getChatId();
@@ -41,6 +47,12 @@ public class Bot extends TelegramLongPollingBot {
 
         if (!userService.existsInDB(chatId)) {
             userService.createNewUser(user);
+
+            SendMessage greetings = SendMessage.builder()
+                    .chatId(chatId)
+                    .text(GREETINGS_TEXT)
+                    .build();
+            execute(greetings);
 
             List<Promotion> promotionList = promotionService.getActualPromotions();
             for (Promotion p: promotionList) {
@@ -60,7 +72,7 @@ public class Bot extends TelegramLongPollingBot {
     }
 
     public void formAndSendPromotion(Promotion pr, User user) {
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String start = simpleDateFormat.format(pr.startDate);
         String end = simpleDateFormat.format(pr.endDate);
         String preparedText = "*Название:* "+pr.title + "\n" + "*Описание:* "+ pr.description + "\n" + "*Начало раздачи:* " + start + "\n" + "*Окончание раздачи:* " + end;
