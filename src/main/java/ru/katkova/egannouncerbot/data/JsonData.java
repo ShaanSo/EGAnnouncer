@@ -31,19 +31,23 @@ public class JsonData {
                     element.getPromotions().getPromotionalOffers().stream()
                             .forEach(promotionalOffer -> {promotionalOffer.getPromotionalOffers().stream()
                                     .forEach(innerPromotionalOffer ->{
-                                        Promotion promotion = new Promotion();
-                                        promotion.setTitle(element.getTitle());
-                                        promotion.setDescription(element.getDescription());
-                                        promotion.setImageUrl(element.getKeyImages().get(0).getUrl());
-                                        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-                                        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
-                                        try {
-                                            Date start = simpleDateFormat.parse(innerPromotionalOffer.getStartDate());
-                                            Date end = simpleDateFormat.parse(innerPromotionalOffer.getEndDate());
-                                            promotion.setStartDate(start);
-                                            promotion.setEndDate(end);
-                                            promotionsList.add(promotion);
-                                        } catch (ParseException e) {
+                                        if (innerPromotionalOffer.getDiscountSetting() != null &&
+                                        !innerPromotionalOffer.getDiscountSetting().getDiscountPercentage().isEmpty() &&
+                                        innerPromotionalOffer.getDiscountSetting().getDiscountPercentage().equals("0")) {
+                                            Promotion promotion = new Promotion();
+                                            promotion.setTitle(element.getTitle());
+                                            promotion.setDescription(element.getDescription());
+                                            promotion.setImageUrl(element.getKeyImages().get(0).getUrl());
+                                            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                                            simpleDateFormat.setTimeZone(TimeZone.getTimeZone("UTC"));
+                                            try {
+                                                Date start = simpleDateFormat.parse(innerPromotionalOffer.getStartDate());
+                                                Date end = simpleDateFormat.parse(innerPromotionalOffer.getEndDate());
+                                                promotion.setStartDate(start);
+                                                promotion.setEndDate(end);
+                                                promotionsList.add(promotion);
+                                            } catch (ParseException e) {
+                                            }
                                         }
                                     });});
                 });
@@ -131,4 +135,12 @@ class PromotionalOffers {
     public String startDate;
     public String endDate;
     public List<PromotionalOffers> promotionalOffers;
+    public DiscountSetting discountSetting;
+}
+
+@Getter
+@JsonIgnoreProperties(ignoreUnknown = true)
+class DiscountSetting {
+    public String discountPercentage;
+    public String discountType;
 }
