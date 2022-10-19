@@ -1,6 +1,7 @@
 package ru.katkova.egannouncerbot.job;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.exc.StreamReadException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
@@ -51,16 +52,16 @@ public class CheckForUpdatesJob {
         jsonData = objectMapper.readValue(response, JsonData.class);
         promotionList = jsonData.getCurrentPromotionsList();
 //       для теста
-//        try {
-//            File file = new File("src/main/resources/test2.json");
-//            jsonData = objectMapper.readValue(file, JsonData.class);
-//            promotionList = jsonData.getCurrentPromotionsList();
-//        } catch (StreamReadException estr) {
-//            System.out.println("StreamReadException");
-//        } catch (IOException e) {
-//            System.out.println("IOEXCEPTION");
-//            e.printStackTrace();
-//        }
+        try {
+            File file = new File("src/main/resources/test3.json");
+            jsonData = objectMapper.readValue(file, JsonData.class);
+            promotionList = jsonData.getCurrentPromotionsList();
+        } catch (StreamReadException estr) {
+            System.out.println("StreamReadException");
+        } catch (IOException e) {
+            System.out.println("IOEXCEPTION");
+            e.printStackTrace();
+        }
 
         //получаем пользователей из БД, которым нужно разослать уведомление
         List<User> userList =  userService.restoreUsersFromDB();

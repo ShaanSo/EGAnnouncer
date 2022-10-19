@@ -84,21 +84,21 @@ public class Bot extends TelegramLongPollingBot {
                     .parseMode("Markdown")
                     .caption(preparedText)
                     .build();
-            try {
-                execute(message);
-            }  catch (TelegramApiException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                execute(message);
+//            }  catch (TelegramApiException e) {
+//                e.printStackTrace();
+//            }
         } else {
             SendMessage message = SendMessage.builder()
                     .chatId(user.getChatId())
                     .parseMode("Markdown")
                     .text(preparedText).build();
-            try {
-                execute(message);
-            }  catch (TelegramApiException e) {
-                e.printStackTrace();
-            }
+//            try {
+//                execute(message);
+//            }  catch (TelegramApiException e) {
+//                e.printStackTrace();
+//            }
         }
     }
 
